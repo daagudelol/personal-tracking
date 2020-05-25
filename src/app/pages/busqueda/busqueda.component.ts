@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { URL_SERVICIOS } from '../../config/config';
 import { Usuario } from '../../models/usuario.model';
-import { Medico } from '../../models/medico.model';
-import { Hospital } from '../../models/hospital.model';
+import { Candidato } from '../../models/candidato.model';
+import { Empresa } from '../../models/empresa.model';
 
 @Component({
   selector: 'app-busqueda',
@@ -14,8 +14,8 @@ import { Hospital } from '../../models/hospital.model';
 export class BusquedaComponent implements OnInit {
 
   usuarios: Usuario[] = [];
-  medicos: Medico[] = [];
-  hospitales: Hospital[] = [];
+  candidatos: Candidato[] = [];
+  empresas: Empresa[] = [];
 
 
   constructor(
@@ -42,8 +42,8 @@ export class BusquedaComponent implements OnInit {
         .subscribe( (resp: any) => {
 
           console.log( resp );
-          this.hospitales = resp.hospitales;
-          this.medicos = resp.medicos;
+          this.empresas = resp.empresas;
+          this.candidatos = resp.candidatos;
           this.usuarios = resp.usuarios;
         });
 

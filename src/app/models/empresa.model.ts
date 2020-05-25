@@ -1,4 +1,4 @@
-export class Hospital {
+export class Empresa {
 
     constructor (
         public nombre: string,

@@ -6,8 +6,8 @@ export { VerificaTokenGuard } from './guards/verifica-token.guard';
 
 
 
-export { MedicoService } from './medico/medico.service';
-export { HospitalService } from './hospital/hospital.service';
+export { CandidatoService } from './candidato/candidato.service';
+export { EmpresaService } from './empresa/empresa.service';
 
 
 

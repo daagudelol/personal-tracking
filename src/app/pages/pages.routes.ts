@@ -15,9 +15,9 @@ import { LoginGuardGuard } from '../services/service.index';
 import { AdminGuard } from '../services/service.index';
 
 import { UsuariosComponent } from './usuarios/usuarios.component';
-import { HospitalesComponent } from './hospitales/hospitales.component';
-import { MedicosComponent } from './medicos/medicos.component';
-import { MedicoComponent } from './medicos/medico.component';
+import { EmpresasComponent } from './empresas/empresas.component';
+import { CandidatosComponent } from './candidatos/candidatos.component';
+import { CandidatoComponent } from './candidatos/candidato.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { VerificaTokenGuard } from '../services/guards/verifica-token.guard';
 
@@ -43,9 +43,9 @@ const pagesRoutes: Routes = [
         canActivate: [ AdminGuard ],
         data: { titulo: 'Mantenimiento de Usuarios' }
     },
-    { path: 'hospitales', component: HospitalesComponent, data: { titulo: 'Mantenimiento de Hospitales' } },
-    { path: 'medicos', component: MedicosComponent, data: { titulo: 'Mantenimiento de Médicos' } },
-    { path: 'medico/:id', component: MedicoComponent, data: { titulo: 'Actualizar Médico' } },
+    { path: 'empresas', component: EmpresasComponent, data: { titulo: 'Mantenimiento de Empresas' } },
+    { path: 'candidatos', component: CandidatosComponent, data: { titulo: 'Mantenimiento de Candidatos' } },
+    { path: 'candidato/:id', component: CandidatoComponent, data: { titulo: 'Actualizar Candidato' } },
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 

@@ -27,20 +27,20 @@
   <div class="col-4">
       <div class="card">
           <div class="card-body">
-              <h4 class="card-title">Médicos</h4>
+              <h4 class="card-title">Candidatos</h4>
 
-              <table class="table table-hover" *ngIf="medicos.length > 0">
+              <table class="table table-hover" *ngIf="candidatos.length > 0">
                   <tbody>
-                      <tr *ngFor="let medico of medicos" [routerLink]="['/medico', medico._id]" class="pointer">
+                      <tr *ngFor="let candidato of candidatos" [routerLink]="['/candidato', candidato._id]" class="pointer">
                           <td>
-                              <img [src]="medico.img | imagen:'medico'" class="img-50 img-circle">
+                              <img [src]="candidato.img | imagen:'candidato'" class="img-50 img-circle">
                           </td>
-                          <td>{{ medico.nombre }}</td>
+                          <td>{{ candidato.nombre }}</td>
                       </tr>
                   </tbody>
               </table>
 
-              <div class="alert alert-info" *ngIf="medicos.length === 0">
+              <div class="alert alert-info" *ngIf="candidatos.length === 0">
                   No hay registros
               </div>
 
@@ -51,20 +51,20 @@
   <div class="col-4">
       <div class="card">
           <div class="card-body">
-              <h4 class="card-title">Hospitales</h4>
+              <h4 class="card-title">Empresas</h4>
 
-              <table class="table table-hover" *ngIf="hospitales.length > 0">
+              <table class="table table-hover" *ngIf="empresas.length > 0">
                   <tbody>
-                      <tr *ngFor="let hospital of hospitales" [routerLink]="['/hospitales']" class="pointer">
+                      <tr *ngFor="let empresa of empresas" [routerLink]="['/empresas']" class="pointer">
                           <td>
-                              <img [src]="hospital.img | imagen:'hospital'" class="img-50 img-circle">
+                              <img [src]="empresa.img | imagen:'empresa'" class="img-50 img-circle">
                           </td>
-                          <td>{{ hospital.nombre }}</td>
+                          <td>{{ empresa.nombre }}</td>
                       </tr>
                   </tbody>
               </table>
 
-              <div class="alert alert-info" *ngIf="hospitales.length === 0">
+              <div class="alert alert-info" *ngIf="empresas.length === 0">
                   No hay registros
               </div>
 
