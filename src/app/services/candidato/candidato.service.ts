@@ -76,7 +76,7 @@ export class CandidatoService {
 
       return this.http.put( url, candidato )
                 .pipe( map( (resp: any) => {
-                  swal('Médico Actualizado', candidato.nombre, 'success');
+                  swal('Candidato Actualizado', candidato.nombre, 'success');
                   return resp.candidato;
 
                 }));
@@ -86,7 +86,7 @@ export class CandidatoService {
       url += '?token=' + this._usuarioService.token;
       return this.http.post( url, candidato )
               .pipe( map( (resp: any) => {
-                swal('Médico Creado', candidato.nombre, 'success');
+                swal('Candidato Creado', candidato.nombre, 'success');
                 return resp.candidato;
               }));
     }
